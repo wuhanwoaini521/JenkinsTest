@@ -8,13 +8,12 @@ FilePath: /jenkinsTest/page/baidu_page.py
 ~~~~~~~~~吼吼吼~~~~~~~~~~
 '''
 
-from base import Base
+from base.base import Base
 
 class BaiduPage(Base):
 	
 	def __init__(self,driver) -> None:
-	    super().__init__()
-	    self.driver = driver
+		super().__init__(driver)
 
 	def search_page(self,url):
 		self.open(url)

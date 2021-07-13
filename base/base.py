@@ -10,12 +10,11 @@ FilePath: /jenkinsTest/base/base.py
 
 
 class Base:
-        
-        def __init__(self,driver) -> None:
-                self.driver = driver
-	
-	def open(self,url = None):
-         if url:
-         	self.driver.get(url)
-         else:
-                 self.driver.get(self.url)
+    def __init__(self,driver):
+        self.driver = driver
+
+    def open(self,url=None):
+        if url is None:
+            self.driver.get(self.url)
+        else:
+            self.driver.get(url)
