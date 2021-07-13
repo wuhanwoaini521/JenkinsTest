@@ -19,6 +19,7 @@ class Test_Case(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.driver = wb.Chrome()
     def test(self):
+        # 打开页面测试
          page  = BaiduPage(self.driver)
          page.search_page("http://www.baidu.com")
 
